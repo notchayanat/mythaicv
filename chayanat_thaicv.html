@@ -7,9 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;800&display=swap');
         body {
             background-color: #F3F4F6;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Sarabun';
+            font-family: 'Sarabun', sans-serif;
             color: #1F2937;
         }
         .chart-container {
@@ -42,18 +43,21 @@
             padding-left: 24px;
             padding-bottom: 24px;
         }
+        .bg-gradient-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-blue-600 text-white pt-16 pb-24 px-4 text-center shadow-md">
+    <header class="bg-gradient-header text-white pt-16 pb-24 px-4 text-center shadow-md">
         <div class="max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">ชยณัฐ ประมูล</h1>
             <h2 class="text-xl md:text-2xl font-medium text-blue-100 mb-6">Full-stack Developer (Frontend & Backend)</h2>
-            <p class="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
-                เชี่ยวชาญการพัฒนาเว็บแอปพลิเคชันแบบครบวงจร โดยเน้นการใช้ PHP MVC (CodeIgniter) และ React.js เพื่อสร้างระบบที่มีประสิทธิภาพสูงและมีความเสถียร
+            <p class="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed italic">
+                "มุ่งมั่นพัฒนาซอฟต์แวร์ด้วยความรับผิดชอบ พร้อมเผชิญหน้ากับความท้าทายและเรียนรู้เทคโนโลยีใหม่เสมอ"
             </p>
-            <div class="mt-8 flex justify-center gap-6 text-sm font-semibold text-blue-200">
+            <div class="mt-8 flex flex-wrap justify-center gap-6 text-sm font-semibold text-blue-200">
                 <span>📍 กรุงเทพมหานคร</span>
                 <span>✉️ not.chayanat@gmail.com</span>
                 <span>📞 061-2749498</span>
@@ -61,46 +65,83 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-4 -mt-12 space-y-12 pb-16">
+    <main class="max-w-6xl mx-auto px-4 -mt-12 space-y-8 pb-16">
+
+        <!-- เส้นทางชีวิตและความท้าทาย -->
+        <section class="bg-white rounded-xl shadow-lg p-8 border-l-8 border-blue-500">
+            <div class="flex flex-col md:flex-row gap-8 items-start">
+                <div class="flex-1">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span class="text-3xl">🛡️</span> ประสบการณ์และความมุ่งมั่นในช่วงที่ผ่านมา
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        ในช่วงเวลาที่ผ่านมา ผมได้เผชิญกับบททดสอบสำคัญที่ต้องใช้ความรับผิดชอบและระเบียบวินัยในระดับสูง 
+                        โดยผมได้รับหน้าที่ดูแลคุณแม่ที่ป่วยเป็นโรคมะเร็งเต้านม ในขณะเดียวกันก็ได้ปฏิบัติหน้าที่เป็น **ครูสอนคอมพิวเตอร์** เพื่อถ่ายทอดทักษะทางไอทีและดูแลจุนเจือครอบครัว ควบคู่ไปกับการทุ่มเทพัฒนาโปรเจกต์จบการศึกษาด้าน Image Processing จนสำเร็จสมบูรณ์ 
+                        ปัจจุบันผมกำลังจะ **ปลดประจำการจากการรับราชการทหาร (กองประจำการ 1 ปี)** และพร้อมเริ่มต้นการทำงานในสายอาชีพ Developer อย่างเต็มศักยภาพ
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="bg-blue-50 p-3 rounded-lg border border-blue-100 text-center">
+                            <p class="text-xs font-bold text-blue-600 uppercase tracking-wide">ทักษะสำคัญ</p>
+                            <p class="text-sm font-semibold text-blue-900">การบริหารจัดการเวลา</p>
+                        </div>
+                        <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100 text-center">
+                            <p class="text-xs font-bold text-emerald-600 uppercase tracking-wide">ทักษะสำคัญ</p>
+                            <p class="text-sm font-semibold text-emerald-900">ความอดทนและระเบียบวินัย</p>
+                        </div>
+                        <div class="bg-amber-50 p-3 rounded-lg border border-amber-100 text-center">
+                            <p class="text-xs font-bold text-amber-600 uppercase tracking-wide">ทักษะสำคัญ</p>
+                            <p class="text-sm font-semibold text-amber-900">ทักษะการถ่ายทอดความรู้</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-white rounded-xl shadow-lg p-8 transform transition hover:-translate-y-1">
-                <h3 class="text-gray-500 text-sm font-bold tracking-wider uppercase mb-2">ประวัติการศึกษา</h3>
-                <p class="text-gray-700 mb-6">ปริญญาตรีวิทยาศาสตรบัณฑิต สาขาวิทยาการคอมพิวเตอร์ มุ่งเน้นการแก้ปัญหาด้วยอัลกอริทึมและการเขียนโปรแกรมเชิงโครงสร้าง</p>
+                <h3 class="text-gray-500 text-xs font-bold tracking-widest uppercase mb-2">ประวัติการศึกษา</h3>
+                <p class="text-gray-900 mb-6 font-bold text-lg">วิทยาศาสตรบัณฑิต (วิทยาการคอมพิวเตอร์)</p>
                 <div class="flex items-end gap-4">
                     <div class="text-5xl font-extrabold text-blue-600">3.04</div>
-                    <div class="text-gray-600 pb-1 font-medium">เกรดเฉลี่ย</div>
+                    <div class="text-gray-600 pb-1 font-medium">เกรดเฉลี่ยสะสม</div>
                 </div>
-                <div class="mt-2 text-sm text-gray-500 font-medium">วท.บ. วิทยาการคอมพิวเตอร์ • มรภ.กำแพงเพชร</div>
+                <div class="mt-2 text-sm text-gray-500">มหาวิทยาลัยราชภัฏกำแพงเพชร (KPRU)</div>
             </div>
 
             <div class="bg-white rounded-xl shadow-lg p-8 transform transition hover:-translate-y-1">
-                <h3 class="text-gray-500 text-sm font-bold tracking-wider uppercase mb-2">ประวัติอาชีวศึกษา</h3>
-                <p class="text-gray-700 mb-6">ประกาศนียบัตรวิชาชีพ สาขาคอมพิวเตอร์ธุรกิจ วางรากฐานด้านทักษะไอทีและพื้นฐานการพัฒนาซอฟต์แวร์</p>
-                <div class="flex items-end gap-4">
-                    <div class="text-5xl font-extrabold text-amber-500">3.35</div>
-                    <div class="text-gray-600 pb-1 font-medium">เกรดเฉลี่ย</div>
+                <h3 class="text-gray-500 text-xs font-bold tracking-widest uppercase mb-2">บทบาทและภาระหน้าที่ล่าสุด</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-blue-600 text-xl">👨‍🏫</span>
+                        <div>
+                            <p class="font-bold text-gray-900">ครูสอนคอมพิวเตอร์</p>
+                            <p class="text-sm text-gray-600 leading-relaxed">พัฒนาหลักสูตรและสอนพื้นฐานการเขียนโปรแกรม</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 border-t border-gray-100 pt-3">
+                        <span class="text-emerald-600 text-xl">🎖️</span>
+                        <div>
+                            <p class="font-bold text-gray-900">รับราชการทหารกองประจำการ (1 ปี)</p>
+                            <p class="text-sm text-gray-600">เสริมสร้างระเบียบวินัย (ปลดประจำการเร็วๆ นี้)</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="mt-2 text-sm text-gray-500 font-medium">ปวช. คอมพิวเตอร์ธุรกิจ</div>
             </div>
         </section>
 
         <section class="bg-white rounded-xl shadow-lg p-8">
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">ความเชี่ยวชาญทางเทคนิค (Full-stack)</h2>
-                <p class="text-gray-600">ภาพรวมเครื่องมือและเทคโนโลยีที่ใช้ในการพัฒนาทั้งส่วนหน้าบ้าน (Frontend) และหลังบ้าน (Backend)</p>
-            </div>
-
+            <h2 class="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-2">
+                ⚙️ ความเชี่ยวชาญทางเทคนิค
+            </h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">ทักษะด้านภาษาโปรแกรม</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">ระดับทักษะรายภาษา</h3>
                     <div class="chart-container">
                         <canvas id="skillsBarChart"></canvas>
                     </div>
                 </div>
-
                 <div>
-                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">สัดส่วนการทำงานแต่ละด้าน</h3>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">ความเชี่ยวชาญตามสายงาน</h3>
                     <div class="chart-container">
                         <canvas id="domainDonutChart"></canvas>
                     </div>
@@ -109,106 +150,78 @@
         </section>
 
         <section class="bg-white rounded-xl shadow-lg p-8">
-            <div class="mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">ประสบการณ์การทำงาน</h2>
-                <p class="text-gray-600">ความสำเร็จที่สำคัญระหว่างการฝึกงานที่ Skywave Technologies</p>
-            </div>
-
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                🏢 ประสบการณ์ฝึกงาน (Skywave Technologies)
+            </h2>
             <div class="pl-4">
                 <div class="timeline-border">
                     <div class="timeline-dot"></div>
-                    <h3 class="text-xl font-bold text-gray-900">การเพิ่มประสิทธิภาพหลังบ้าน</h3>
-                    <p class="text-blue-600 font-medium mb-2">PHP MVC (CodeIgniter)</p>
-                    <p class="text-gray-700">ปรับปรุงโครงสร้างโค้ด (Refactor) ของเว็บแอปพลิเคชันเดิมเพื่อเพิ่มความเสถียรและตรวจสอบความถูกต้องของระบบ</p>
+                    <h3 class="text-xl font-bold text-gray-900">Backend Optimization</h3>
+                    <p class="text-blue-600 font-medium mb-1 uppercase text-sm">PHP MVC (CodeIgniter)</p>
+                    <p class="text-gray-700 text-sm">Refactor และปรับปรุงระบบเดิมเพื่อเพิ่มประสิทธิภาพและความเสถียรของแอปพลิเคชัน</p>
                 </div>
-
                 <div class="timeline-border">
                     <div class="timeline-dot"></div>
-                    <h3 class="text-xl font-bold text-gray-900">การพัฒนาหน้าบ้าน</h3>
-                    <p class="text-blue-600 font-medium mb-2">HTML5, CSS3, JavaScript</p>
-                    <p class="text-gray-700">พัฒนาหน้าจอผู้ใช้งาน (UI) ให้ทันสมัยและรองรับการแสดงผลทุกอุปกรณ์ (Responsive Design)</p>
+                    <h3 class="text-xl font-bold text-gray-900">Frontend Development</h3>
+                    <p class="text-blue-600 font-medium mb-1 uppercase text-sm">HTML5, CSS3, JavaScript</p>
+                    <p class="text-gray-700 text-sm">พัฒนาส่วนติดต่อผู้ใช้งาน (UI) ให้ทันสมัยและรองรับการแสดงผลแบบ Responsive</p>
                 </div>
-
-                <div class="timeline-border">
-                    <div class="timeline-dot"></div>
-                    <h3 class="text-xl font-bold text-gray-900">การรวมฟีเจอร์แบบ Full-stack</h3>
-                    <p class="text-amber-500 font-medium mb-2">React.js & Chatbot API</p>
-                    <p class="text-gray-700">เชื่อมต่อฟีเจอร์ AI Chatbot เข้ากับผลิตภัณฑ์จริงโดยใช้ React.js เพื่อเพิ่มประสบการณ์การใช้งานของผู้ใช้</p>
-                </div>
-
                 <div class="timeline-border border-transparent pb-0">
-                    <div class="timeline-dot bg-emerald-500 shadow-emerald-100"></div>
-                    <h3 class="text-xl font-bold text-gray-900">การจัดการฐานข้อมูล</h3>
-                    <p class="text-emerald-500 font-medium mb-2">MySQL</p>
-                    <p class="text-gray-700">จัดการโครงสร้างข้อมูลที่ซับซ้อนและการเขียน Query เพื่อให้ระบบรับส่งข้อมูลกับหลังบ้านได้อย่างรวดเร็ว</p>
+                    <div class="timeline-dot bg-amber-500"></div>
+                    <h3 class="text-xl font-bold text-gray-900">Full-stack Integration</h3>
+                    <p class="text-amber-600 font-medium mb-1 uppercase text-sm">React.js & AI Chatbot API</p>
+                    <p class="text-gray-700 text-sm">บูรณาการฟีเจอร์ AI Chatbot เข้ากับระบบงานจริงเพื่อยกระดับประสบการณ์ผู้ใช้งาน</p>
                 </div>
             </div>
         </section>
 
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div class="md:col-span-2 bg-white rounded-xl shadow-lg p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-2">โปรเจกต์เด่น: ระบบคัดแยกขวด PET</h2>
-                <p class="text-blue-600 font-semibold mb-4">โปรเจกต์จบการศึกษา</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">โปรเจกต์จบการศึกษา: ระบบคัดแยกขวด PET</h2>
+                <p class="text-blue-600 font-semibold mb-4 text-sm uppercase">Image Processing (Python & OpenCV)</p>
                 <p class="text-gray-700 leading-relaxed mb-4">
-                    พัฒนาระบบคัดแยกขวด PET อัตโนมัติโดยใช้เทคโนโลยี <strong>Image Processing</strong> และ Machine Learning
+                    พัฒนาระบบคัดแยกขวดอัตโนมัติด้วยการประมวลผลภาพดิจิทัล เป็นโครงการที่วิจัยและพัฒนาอย่างต่อเนื่องจนระบบทำงานได้อย่างแม่นยำ พร้อมผ่านอุปสรรคและข้อจำกัดต่างๆ ในช่วงเวลาที่ผ่านมา
                 </p>
-                <div class="mt-6 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Python</span>
-                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">OpenCV</span>
-                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">การประมวลผลภาพ</span>
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">Python</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">OpenCV</span>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">การประมวลผลภาพ</span>
                 </div>
             </div>
 
-            <div class="bg-blue-900 rounded-xl shadow-lg p-8 text-white">
-                <h2 class="text-xl font-bold mb-6">ทักษะด้านภาษา</h2>
-                <ul class="space-y-4">
-                    <li class="flex justify-between items-center border-b border-blue-800 pb-2">
-                        <span class="font-medium text-blue-100">ภาษาไทย</span>
-                        <span class="font-bold text-emerald-400">เจ้าของภาษา</span>
-                    </li>
-                    <li class="flex justify-between items-center pb-2">
-                        <span class="font-medium text-blue-100">ภาษาอังกฤษ</span>
-                        <span class="font-bold text-amber-400">พื้นฐาน</span>
-                    </li>
-                </ul>
-                <div class="mt-8 text-xs text-blue-300 italic">
-                    *เน้นการอ่านคู่มือทางเทคนิคและการสื่อสารที่เกี่ยวข้องกับการเขียนโปรแกรม
+            <div class="bg-blue-900 rounded-xl shadow-lg p-8 text-white flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl font-bold mb-6 flex items-center gap-2">🌐 ภาษา</h2>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between border-b border-blue-800 pb-2">
+                            <span>ภาษาไทย</span>
+                            <span class="font-bold text-emerald-400">ดีเยี่ยม (เจ้าของภาษา)</span>
+                        </li>
+                        <li class="flex justify-between pb-2">
+                            <span>ภาษาอังกฤษ</span>
+                            <span class="font-bold text-amber-400">พื้นฐาน (ระดับสื่อสาร)</span>
+                        </li>
+                    </ul>
                 </div>
+                <p class="text-xs text-blue-300 italic mt-4">
+                    *เน้นการศึกษา Technical Documentation และการสื่อสารภายในทีมพัฒนา
+                </p>
             </div>
         </section>
 
     </main>
 
     <script>
-        const wrapTextFunc = function(str) {
-            if(str.length <= 16) return str;
-            const words = str.split(' ');
-            const lines = [];
-            let curr = '';
-            for(let i=0; i<words.length; i++){
-                if((curr + words[i]).length > 16){
-                    if(curr.trim()) lines.push(curr.trim());
-                    curr = words[i] + ' ';
-                } else {
-                    curr += words[i] + ' ';
-                }
-            }
-            if(curr.trim()) lines.push(curr.trim());
-            return lines;
-        };
-
-        const barLabels = ['PHP (CodeIgniter)', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Python (OpenCV)', 'SQL (MySQL)', 'ภาษาอื่นๆ'].map(wrapTextFunc);
-        const barData = [90, 85, 95, 60, 65, 40];
-
         window.onload = function() {
+            // Bar Chart
             const ctxBar = document.getElementById('skillsBarChart').getContext('2d');
             new Chart(ctxBar, {
                 type: 'bar',
                 data: {
-                    labels: barLabels,
+                    labels: ['PHP (CI)', 'JavaScript', 'HTML/CSS', 'Python', 'MySQL', 'อื่นๆ'],
                     datasets: [{
                         label: 'ระดับความเชี่ยวชาญ',
-                        data: barData,
+                        data: [90, 85, 95, 60, 65, 40],
                         backgroundColor: ['#2563EB', '#2563EB', '#2563EB', '#F59E0B', '#F59E0B', '#9CA3AF'],
                         borderRadius: 4
                     }]
@@ -218,32 +231,19 @@
                     maintainAspectRatio: false,
                     plugins: { legend: { display: false } },
                     scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100,
-                            ticks: {
-                                callback: function(value){
-                                    if(value===90) return 'เชี่ยวชาญ';
-                                    if(value===60) return 'ปานกลาง';
-                                    if(value===30) return 'พื้นฐาน';
-                                    return '';
-                                }
-                            }
-                        }
+                        y: { beginAtZero: true, max: 100, ticks: { display: false }, grid: { display: false } }
                     }
                 }
             });
 
-            const donutLabels = ['พัฒนาหลังบ้าน', 'พัฒนาหน้าบ้าน', 'จัดการฐานข้อมูล', 'อื่นๆ'].map(wrapTextFunc);
-            const donutData = [40, 40, 15, 5];
-
+            // Donut Chart
             const ctxDonut = document.getElementById('domainDonutChart').getContext('2d');
             new Chart(ctxDonut, {
                 type: 'doughnut',
                 data: {
-                    labels: donutLabels,
+                    labels: ['Backend', 'Frontend', 'Database', 'สอน/งานส่วนอื่น'],
                     datasets: [{
-                        data: donutData,
+                        data: [35, 35, 15, 15],
                         backgroundColor: ['#2563EB', '#F59E0B', '#10B981', '#6B7280'],
                         borderWidth: 0
                     }]
@@ -252,9 +252,7 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     cutout: '70%',
-                    plugins: {
-                        legend: { position: 'bottom' }
-                    }
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, padding: 15, font: { family: 'Sarabun' } } } }
                 }
             });
         };
