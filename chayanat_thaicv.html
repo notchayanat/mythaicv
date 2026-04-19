@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chayanat Pramul - Full-stack Developer Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #F3F4F6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1F2937;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 640px) {
+            .chart-container {
+                height: 280px;
+            }
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #2563EB;
+            position: absolute;
+            left: -8px;
+            top: 6px;
+            box-shadow: 0 0 0 4px #DBEAFE;
+        }
+        .timeline-border {
+            border-left: 2px solid #E5E7EB;
+            position: relative;
+            padding-left: 24px;
+            padding-bottom: 24px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-blue-600 text-white pt-16 pb-24 px-4 text-center shadow-md">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Chayanat Pramul</h1>
+            <h2 class="text-xl md:text-2xl font-medium text-blue-100 mb-6">Full-stack Developer (Frontend & Backend)</h2>
+            <p class="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
+                Specialized in developing end-to-end web applications with a focus on PHP MVC (CodeIgniter) and React.js to build high-performance and stable systems.
+            </p>
+            <div class="mt-8 flex justify-center gap-6 text-sm font-semibold text-blue-200">
+                <span>📍 Bangkok, Thailand</span>
+                <span>✉️ not.chayanat@gmail.com</span>
+                <span>📞 061-2749498</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 -mt-12 space-y-12 pb-16">
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl shadow-lg p-8 transform transition hover:-translate-y-1">
+                <h3 class="text-gray-500 text-sm font-bold tracking-wider uppercase mb-2">Education</h3>
+                <p class="text-gray-700 mb-6">Bachelor of Science in Computer Science, focusing on algorithmic problem-solving and structured programming.</p>
+                <div class="flex items-end gap-4">
+                    <div class="text-5xl font-extrabold text-blue-600">3.04</div>
+                    <div class="text-gray-600 pb-1 font-medium">GPA</div>
+                </div>
+                <div class="mt-2 text-sm text-gray-500 font-medium">B.S. Computer Science • KPRU</div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 transform transition hover:-translate-y-1">
+                <h3 class="text-gray-500 text-sm font-bold tracking-wider uppercase mb-2">Vocational Background</h3>
+                <p class="text-gray-700 mb-6">Vocational Certificate in Business Computer, establishing fundamental IT skills and software development basics.</p>
+                <div class="flex items-end gap-4">
+                    <div class="text-5xl font-extrabold text-amber-500">3.35</div>
+                    <div class="text-gray-600 pb-1 font-medium">GPA</div>
+                </div>
+                <div class="mt-2 text-sm text-gray-500 font-medium">Voc. Cert. Business Computer</div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl shadow-lg p-8">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Technical Proficiency (Full-stack)</h2>
+                <p class="text-gray-600">Overview of tools and technologies used for both Frontend and Backend development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">Programming Language Mastery</h3>
+                    <div class="chart-container">
+                        <canvas id="skillsBarChart"></canvas>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4 text-center">Work Domain Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="domainDonutChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-xl shadow-lg p-8">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Professional Experience</h2>
+                <p class="text-gray-600">Key achievements during the internship at Skywave Technologies.</p>
+            </div>
+
+            <div class="pl-4">
+                <div class="timeline-border">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-gray-900">Backend Optimization</h3>
+                    <p class="text-blue-600 font-medium mb-2">PHP MVC (CodeIgniter)</p>
+                    <p class="text-gray-700">Refactored legacy web applications to improve system stability and ensured all core business logic functioned accurately.</p>
+                </div>
+
+                <div class="timeline-border">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-gray-900">Frontend Development</h3>
+                    <p class="text-blue-600 font-medium mb-2">HTML5, CSS3, JavaScript</p>
+                    <p class="text-gray-700">Developed modern User Interfaces (UI) with a focus on responsive design across multiple screen sizes.</p>
+                </div>
+
+                <div class="timeline-border">
+                    <div class="timeline-dot"></div>
+                    <h3 class="text-xl font-bold text-gray-900">Full-stack Feature Integration</h3>
+                    <p class="text-amber-500 font-medium mb-2">React.js & Chatbot API</p>
+                    <p class="text-gray-700">Integrated AI Chatbot features into production products using React.js to enhance user engagement.</p>
+                </div>
+
+                <div class="timeline-border border-transparent pb-0">
+                    <div class="timeline-dot bg-emerald-500 shadow-emerald-100"></div>
+                    <h3 class="text-xl font-bold text-gray-900">Database Management</h3>
+                    <p class="text-emerald-500 font-medium mb-2">MySQL</p>
+                    <p class="text-gray-700">Managed complex data structures and queries to ensure high-speed communication with the backend.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Featured Project: PET Bottle Classifier</h2>
+                <p class="text-blue-600 font-semibold mb-4">Graduation Project</p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Developed an automated PET bottle classification system utilizing <strong>Image Processing</strong> and Machine Learning technologies.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Python</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">OpenCV</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">Image Processing</span>
+                </div>
+            </div>
+
+            <div class="bg-blue-900 rounded-xl shadow-lg p-8 text-white">
+                <h2 class="text-xl font-bold mb-6">Languages</h2>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center border-b border-blue-800 pb-2">
+                        <span class="font-medium text-blue-100">Thai</span>
+                        <span class="font-bold text-emerald-400">Native</span>
+                    </li>
+                    <li class="flex justify-between items-center pb-2">
+                        <span class="font-medium text-blue-100">English</span>
+                        <span class="font-bold text-amber-400">Basic</span>
+                    </li>
+                </ul>
+                <div class="mt-8 text-xs text-blue-300 italic">
+                    *Focus on technical documentation reading and code-based communication.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const wrapTextFunc = function(str) {
+            if(str.length <= 16) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let curr = '';
+            for(let i=0; i<words.length; i++){
+                if((curr + words[i]).length > 16){
+                    if(curr.trim()) lines.push(curr.trim());
+                    curr = words[i] + ' ';
+                } else {
+                    curr += words[i] + ' ';
+                }
+            }
+            if(curr.trim()) lines.push(curr.trim());
+            return lines;
+        };
+
+        const barLabels = ['PHP (CodeIgniter)', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'Python (OpenCV)', 'SQL (MySQL)', 'Other Languages'].map(wrapTextFunc);
+        const barData = [90, 85, 95, 60, 65, 40];
+
+        window.onload = function() {
+            const ctxBar = document.getElementById('skillsBarChart').getContext('2d');
+            new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: barLabels,
+                    datasets: [{
+                        label: 'Proficiency Score',
+                        data: barData,
+                        backgroundColor: ['#2563EB', '#2563EB', '#2563EB', '#F59E0B', '#F59E0B', '#9CA3AF'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value){
+                                    if(value===90) return 'Proficient';
+                                    if(value===60) return 'Intermediate';
+                                    if(value===30) return 'Basic';
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            const donutLabels = ['Backend Dev', 'Frontend Dev', 'Database Mgt.', 'Others'].map(wrapTextFunc);
+            const donutData = [40, 40, 15, 5];
+
+            const ctxDonut = document.getElementById('domainDonutChart').getContext('2d');
+            new Chart(ctxDonut, {
+                type: 'doughnut',
+                data: {
+                    labels: donutLabels,
+                    datasets: [{
+                        data: donutData,
+                        backgroundColor: ['#2563EB', '#F59E0B', '#10B981', '#6B7280'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '70%',
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
